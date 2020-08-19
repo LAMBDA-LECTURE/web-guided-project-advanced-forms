@@ -125,7 +125,7 @@ export default function App() {
     // 🔥 STEP 10- ADJUST THE STATUS OF `disabled` EVERY TIME `formValues` CHANGES
     formSchema.isValid(formValues)
       .then(valid => {
-        setButtonDisabled(!valid);
+        setDisabled(!valid);
       })
   }, [formValues])
 
