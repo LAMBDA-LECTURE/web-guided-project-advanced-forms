@@ -4,16 +4,16 @@ import * as yup from 'yup'
 const formSchema = yup.object().shape({
   email: yup
     .string()
-    .email("Must be a valid email address")
-    .required("Must include email address"),
+    .email('Must be a valid email address')
+    .required('Must include email address'),
   username: yup
     .string()
-    .min(3, "Username must be at least 3 characters long")
-    .required("Username is Required"),
+    .min(3, 'Username must be at least 3 characters long')
+    .required('Username is Required'),
   role: yup
     .string()
-    .oneOf(['alumni', 'instructor', 'tl', 'student'], "You must select a role")
-    .required("You must select a role"),
+    .oneOf(['alumni', 'instructor', 'tl', 'student'], 'You must select a role')
+    .required('You must select a role'),
 })
 
 export default formSchema
