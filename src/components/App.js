@@ -84,14 +84,14 @@ export default function App() {
   const inputChange = (name, value) => {
     // 🔥 STEP 11- RUN VALIDATION WITH YUP
     yup
-    .reach(formSchema, e.target.name)
+    .reach(formSchema, name)
     //we can then run validate using the value
-    .validate(e.target.value)
+    .validate(value)
     // if the validation is successful, we can clear the error message
     .then(valid => {
       setErrors({
         ...errors,
-        [e.target.name]: "",
+        [name]: "",
       });
     })
     /* if the validation is unsuccessful, we can set the error message to the message 
@@ -99,7 +99,7 @@ export default function App() {
     .catch(err => {
       setErrors({
         ...errors,
-        [e.target.name]: err.errors[0],
+        [name]: err.errors[0],
       })
     })
   
