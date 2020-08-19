@@ -123,7 +123,7 @@ export default function App() {
 
   useEffect(() => {
     // 🔥 STEP 10- ADJUST THE STATUS OF `disabled` EVERY TIME `formValues` CHANGES
-  }, [])
+  }, [formValues])
 
   return (
     <div className='container'>
