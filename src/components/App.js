@@ -123,9 +123,10 @@ export default function App() {
 
   useEffect(() => {
     // 🔥 STEP 10- ADJUST THE STATUS OF `disabled` EVERY TIME `formValues` CHANGES
-    formSchema.isValid(formValues).then(valid => {
-      setButtonDisabled(!valid);
-    })
+    formSchema.isValid(formValues)
+      .then(valid => {
+        setButtonDisabled(!valid);
+      })
   }, [formValues])
 
   return (
