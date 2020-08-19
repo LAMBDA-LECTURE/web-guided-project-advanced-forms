@@ -12,12 +12,12 @@ import FriendForm from './FriendForm'
 //////////////// INITIAL STATES ////////////////
 const initialFormValues = {
   ///// TEXT INPUTS /////
-  username: '',
-  email: '',
+  username: 'fo',
+  email: 'sdf',
   ///// DROPDOWN /////
-  role: '',
+  role: 'dasssss',
   ///// RADIO BUTTONS /////
-  civil: '',
+  civil: 'foo',
   ///// CHECKBOXES /////
   hobbies: {
     hiking: false,
