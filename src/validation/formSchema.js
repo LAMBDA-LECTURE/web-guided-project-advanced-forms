@@ -1,6 +1,5 @@
 // Here goes the schema for the form
-import {} from 'yup'
-
+import * as Yup from 'yup'
 
 const formSchema = Yup.object().shape({
   email: Yup
