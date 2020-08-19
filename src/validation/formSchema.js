@@ -10,9 +10,9 @@ const formSchema = yup.object().shape({
     .string()
     .min(3, "Username must be at least 3 characters long")
     .required("Username is Required"),
-  terms: yup
-    .boolean()
-    .oneOf([true], "You must accept Terms and Conditions")
+  role: yup
+    .string()
+    .oneOf(['alumni', 'instructor', 'tl', 'student'], "You must accept Terms and Conditions")
     // required isn't required for checkboxes.
 })
 
