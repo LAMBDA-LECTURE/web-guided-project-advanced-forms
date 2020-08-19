@@ -118,6 +118,7 @@ export default function FriendForm(props) {
             type="checkbox"
             name='hiking'
             checked={values.hobbies.hiking}
+            onChange={onCheckboxChange}
           />
         </label>
 
