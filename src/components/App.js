@@ -83,6 +83,26 @@ export default function App() {
   //////////////// FORM ACTIONS ////////////////
   const inputChange = (name, value) => {
     // 🔥 STEP 11- RUN VALIDATION WITH YUP
+    yup
+    .reach(formSchema, e.target.name)
+    //we can then run validate using the value
+    .validate(e.target.value)
+    // if the validation is successful, we can clear the error message
+    .then(valid => {
+      setErrors({
+        ...errors,
+        [e.target.name]: "",
+      });
+    })
+    /* if the validation is unsuccessful, we can set the error message to the message 
+      returned from yup (that we created in our schema) */
+    .catch(err => {
+      setErrors({
+        ...errors,
+        [e.target.name]: err.errors[0],
+      })
+    })
+  
     setFormValues({
       ...formValues,
       [name]: value // NOT AN ARRAY
