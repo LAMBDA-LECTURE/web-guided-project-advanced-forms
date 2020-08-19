@@ -122,14 +122,13 @@ export default function App() {
   }
 
   const submit = () => {
-    debugger
     const newFriend = {
       username: formValues.username.trim(),
       email: formValues.email.trim(),
       role: formValues.role,
       civil: formValues.civil,
       // 🔥 STEP 8- WHAT ABOUT HOBBIES?
-      hobbies: Object.keys(formValues.hobbies).filter(h => h),
+      hobbies: Object.keys(formValues.hobbies).filter(hob => formValues.hobbies[hob]),
     }
     // 🔥 STEP 9- POST NEW FRIEND USING HELPER
     postNewFriend(newFriend)
