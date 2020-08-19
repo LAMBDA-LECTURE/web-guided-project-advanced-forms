@@ -90,7 +90,6 @@ export default function App() {
   }
 
   const checkboxChange = (name, isChecked) => {
-    debugger
     // 🔥 STEP 7- IMPLEMENT!
     //  set a new state for the whole form
     setFormValues({
@@ -109,6 +108,7 @@ export default function App() {
       role: formValues.role.trim(),
       civil: formValues.civil.trim(),
       // 🔥 STEP 8- WHAT ABOUT HOBBIES?
+      hobbies: 
     }
     // 🔥 STEP 9- POST NEW FRIEND USING HELPER
   }
