@@ -16,7 +16,6 @@ export default function FriendForm(props) {
   }
 
   const onCheckboxChange = evt => {
-    debugger
     const { name, checked } = evt.target
     checkboxChange(name, checked)
   }
@@ -114,29 +113,32 @@ export default function FriendForm(props) {
         {/* ////////// CHECKBOXES ////////// */}
         {/* ////////// CHECKBOXES ////////// */}
         {/* ////////// CHECKBOXES ////////// */}
-        <label>Hiking</label>
+        <label>Hiking
         <input
-          type="checkbox"
-          name='hiking'
-          checked={values.hobbies.hiking}
-          onChange={onCheckboxChange}
-        />
+            type="checkbox"
+            name='hiking'
+            checked={values.hobbies.hiking}
+            onChange={onCheckboxChange}
+          />
+        </label>
 
-        <label>Reading</label>
+        <label>Reading
         <input
-          type="checkbox"
-          name="reading"
-          checked={values.hobbies.reading}
-          onChange={onCheckboxChange}
-        />
+            type="checkbox"
+            name="reading"
+            checked={values.hobbies.reading}
+            onChange={onCheckboxChange}
+          />
+        </label>
 
-        <label>Coding</label>
+        <label>Coding
         <input
-          type="checkbox"
-          name="coding"
-          checked={values.hobbies.coding}
-          onChange={onCheckboxChange}
-        />
+            type="checkbox"
+            name="coding"
+            checked={values.hobbies.coding}
+            onChange={onCheckboxChange}
+          />
+        </label>
       </div>
     </form>
   )
