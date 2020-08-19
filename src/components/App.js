@@ -122,6 +122,7 @@ export default function App() {
   }
 
   const submit = () => {
+    debugger
     const newFriend = {
       username: formValues.username.trim(),
       email: formValues.email.trim(),
