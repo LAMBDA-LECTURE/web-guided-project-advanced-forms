@@ -89,13 +89,14 @@ export default function App() {
   }
 
   const checkboxChange = (name, isChecked) => {
+    debugger
     // 🔥 STEP 7- IMPLEMENT!
     //  set a new state for the whole form
     setFormValues({
       ...formValues,
       hobbies: {
         ...formValues.hobbies,
-        [name]
+        [name]: isChecked,
       }
     })
   }
