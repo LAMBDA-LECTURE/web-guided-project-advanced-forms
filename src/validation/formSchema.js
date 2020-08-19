@@ -14,6 +14,10 @@ const formSchema = yup.object().shape({
     .string()
     .oneOf(['alumni', 'instructor', 'tl', 'student'], 'You must select a role')
     .required('You must select a role'),
+  civil: yup
+    .string()
+    .oneOf(['single', 'married'], 'You must select a civil status')
+    .required('You must select a civil status')
 })
 
 export default formSchema
