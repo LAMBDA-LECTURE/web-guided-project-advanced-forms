@@ -68,7 +68,7 @@ export default function App() {
     axios.post('http://localhost:4000/friends', newFriend)
       .then(res => {
         // setFriends(friends.concat(res.data))
-        setFriends([ ...friends, res.data ])
+        setFriends([...friends, res.data])
       })
       .catch(err => {
         debugger
@@ -123,6 +123,9 @@ export default function App() {
 
   useEffect(() => {
     // 🔥 STEP 10- ADJUST THE STATUS OF `disabled` EVERY TIME `formValues` CHANGES
+    formSchema.isValid(formValues).then(valid => {
+      setButtonDisabled(!valid);
+    })
   }, [formValues])
 
   return (
