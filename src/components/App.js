@@ -54,7 +54,7 @@ export default function App() {
     //    helper to [GET] all friends from `http://localhost:4000/friends`
     axios.get('http://localhost:4000/friends')
       .then(res => {
-        debugger
+        setFriends(res.data)
       })
       .catch(err => {
         debugger
