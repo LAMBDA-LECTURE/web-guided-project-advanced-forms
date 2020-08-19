@@ -72,6 +72,9 @@ export default function App() {
       .catch(err => {
         debugger
       })
+      .finally(() => {
+        setFormValues(initialFormValues)
+      })
   }
 
   //////////////// FORM ACTIONS ////////////////
