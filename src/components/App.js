@@ -89,16 +89,16 @@ export default function App() {
     .validate(value)
     // if the validation is successful, we can clear the error message
     .then(valid => {
-      setErrors({
-        ...errors,
+      setFormErrors({
+        ...formErrors,
         [name]: "",
-      });
+      })
     })
     /* if the validation is unsuccessful, we can set the error message to the message 
       returned from yup (that we created in our schema) */
     .catch(err => {
-      setErrors({
-        ...errors,
+      setFormErrors({
+        ...formErrors,
         [name]: err.errors[0],
       })
     })
