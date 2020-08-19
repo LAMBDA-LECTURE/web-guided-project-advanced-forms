@@ -12,8 +12,8 @@ const formSchema = yup.object().shape({
     .required("Username is Required"),
   role: yup
     .string()
-    .oneOf(['alumni', 'instructor', 'tl', 'student'], "You must accept Terms and Conditions")
-    // required isn't required for checkboxes.
+    .oneOf(['alumni', 'instructor', 'tl', 'student'], "You must select a role")
+    .required("You must select a role"),
 })
 
 export default formSchema
