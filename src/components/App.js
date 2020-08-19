@@ -91,6 +91,7 @@ export default function App() {
   const checkboxChange = (name, isChecked) => {
     // 🔥 STEP 7- IMPLEMENT!
     //  set a new state for the whole form
+    setFormValues()
   }
 
   const submit = () => {
