@@ -89,7 +89,8 @@ export default function FriendForm(props) {
         <label>Single
           <input
             type="radio"
-            name=
+            name='civil'
+            
           />
         </label>
 
