@@ -10,9 +10,11 @@ const formSchema = Yup.object().shape({
   password: Yup
     .string()
     .min(6, "Passwords must be at least 6 characters long.")
-    .required("Password is Required")
+    .required("Password is Required"),
   terms: Yup
     .boolean()
     .oneOf([true], "You must accept Terms and Conditions")
     // required isn't required for checkboxes.
 })
+
+export default formSchema
